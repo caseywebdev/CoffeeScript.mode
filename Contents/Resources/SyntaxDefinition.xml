@@ -1,23 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <syntax>
 
-
-    <!-- 
-    The <head> tag encloses some global information about the mode.
-    This tag is required.
-    -->    
-
     <head>
-
-        <!-- 
-        The <name> specifies the modes name. 
-        This tag is required and must match with the name in the plist after the SEEMode..
-        -->    
-
-        <name>Example Syntax</name>
-
-        <!-- optional to add spelling-dicitionary autocomplete words -->
-        <autocompleteoptions use-spelling-dictionary="yes" />
+        <name>CoffeeScript</name>
 
         <!-- 
         The <charsintokens> and the <charsdelimitingtokens> instruct the syntax highlighter
@@ -80,7 +65,7 @@
                 
         -->    
     
-        <default id="Base" color="#000" inverted-color="#fff">
+        <default id="Base" color="#0f0" inverted-color="#f0f">
 
             <!-- 
             The <keywords> tag specifies keyword groups within the current state.
