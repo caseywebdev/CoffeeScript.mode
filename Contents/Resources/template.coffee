@@ -4,7 +4,7 @@ $(document).ready ->
   
 # Assignment:
 number   = 42
-opposite = true
+opposite = true     # comment at end of line
 
 # Conditions:
 number = -42 if opposite
@@ -29,4 +29,8 @@ race = (winner, runners...) ->
 alert "I knew it!" if elvis?
 
 # Array comprehensions:
-cubes = (math.cube num for num in list)
+cubes = (math.cube num for num in list) 
+
+###
+Block comment
+###

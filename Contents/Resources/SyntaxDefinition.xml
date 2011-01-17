@@ -133,12 +133,12 @@
     
     
             <state id="Comment" color="#236E25" font-style="italic">
-                <begin><regex>/\*</regex></begin>
-                <end><regex>\*/</regex></end>
+                <begin><regex>###</regex></begin>
+                <end><regex>###</regex></end>
             </state>
             
             <state id="SingleComment" color="#236E25" font-style="italic">
-                <begin><regex>//</regex></begin>
+                <begin><regex>#</regex></begin>
                 <end><regex>[\n\r]</regex></end>
             </state>
             
