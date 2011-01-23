@@ -9,6 +9,12 @@ opposite = true     # comment at end of line
 # Conditions:
 number = -42 if opposite
 
+# Strings
+double_quote_string = "This string is in double quotes"
+single_quote_string = 'This string is in single quotes'
+string_segment = 'interpolated in-line'
+interpolated_string = "This string is #{ string_segment }"
+
 # Functions:
 square = (x) -> x * x
 
@@ -36,14 +42,14 @@ Block comment
 ###
 
 apple = `function(){
-  Apple = function(){
+  Apple = function (){
     this.family = "Granny Smith";
     this.peel = function(){
       // Peel this apple.
+      3 + 4 == 10
+      5 > 9
     }
   }
   
   return Apple.new();
-  
-  
 }`

@@ -3,35 +3,10 @@
 
     <head>
         <name>CoffeeScript</name>
-
-        <!-- 
-        The <charsintokens> and the <charsdelimitingtokens> instruct the syntax highlighter
-        where to tokenize the text for fast finding of plain strings.
-        The <charsintokens> tag specifies the characters that can occur in strings,
-        the <charsdelimitingtokens> tag specifies the tags that cannot occur in strings.
-        One of these tags has to be specified.
-        Tip: Use CDATA here.
-        -->    
-
         <charsintokens><![CDATA[_0987654321abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@]]></charsintokens> 
         <!-- <charsdelimitingtokens><![CDATA[ -]]></charsdelimitingtokens> -->
-        
-        
-        <!--
-          the <charsincompletion> defines characters used for autocompletion. e.g. in perl
-          you want this to include the $ sign to autocomplete variables.
-          If left out the regular expression word boundaries are used.
-        -->
         <!-- <charsincompletion><![CDATA[_0987654321abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-@$</=>!]]></charsincompletion> -->
     </head>
-
-
-    <!-- 
-    The <states> tag encloses all syntax states.
-    States are areas of the test that begin and end with an regex like comments or strings,
-    with exception of the default state, that exists anywhere where no other state exists.
-    This tag is required.
-    -->    
 
     <states>
     
@@ -92,26 +67,35 @@
                     no      Don't add to autocomplete dictionary
             -->    
 
-            <keywords id="Keywords" color="#6C0540" casesensitive="no" useforautocomplete="yes">
-            
-                <!-- 
-                    <string> tags specify plain text to be colored. If your tag does not
-                    get colored, check in <charsintokens> if you are tokenizing correctly.             
-                -->    
-            
-				<string>colorme</string>
-				<string>andmetoo</string>
-
-                <!-- 
-                    <regex> tags specify regular expression to be colored. 
-                    Only the first group will be colored, so enclose the part to color
-                    with parens.
-                    
-                    The example colors digits prefixed by foo. (only the digits)             
-                -->    
-
-				<regex>foo([0-9])</regex>
-
+              <keywords id="Keywords" color="#881350" useforautocomplete="yes" casesensitive="no"> 
+            	<!-- STUDIO added case insensitive -->
+                <string>if</string>
+                <string>unless</string>
+                <string>else</string>
+                <string>for</string>
+                <string>in</string>
+                <string>while</string>
+                <string>do</string>
+                <string>continue</string>
+                <string>break</string>
+                <string>with</string>
+                <string>try</string>
+                <string>catch</string>
+                <string>switch</string>
+                <string>case</string>
+                <string>new</string>
+                <string>var</string>
+                <string>function</string>
+                <string>return</string>
+                <string>this</string>
+                <string>delete</string>
+                <string>true</string>
+                <string>false</string>
+                <string>void</string>
+                <string>throw</string>
+                <string>typeof</string>
+                <string>const</string>
+                <string>default</string>
             </keywords>
 
             <keywords id="Other keywords" color="#400080" font-weight="bold" font-style="italic">
@@ -145,9 +129,21 @@
             <state id="String" color="#760f15">
                 <begin><regex>"</regex></begin>
                 <end><regex>(((?&lt;!\\)(\\\\)*)|^)"</regex></end>
-                <keywords id="Other keywords" color="#400080" font-style="italic">
-                  <string>foobar</string>
-                </keywords>
+                
+                <state id="Interpolated Values" color="#b9302e">
+                	<begin><regex>#{</regex></begin>
+                	<end><regex>}</regex></end>	
+                </state>
+            </state>
+            
+            <state id="SingleString" color="#760f15">
+                <begin><regex>'</regex></begin>
+                <end><regex>(((?&lt;!\\)(\\\\)*)|^)'</regex></end>
+                
+                <state id="Interpolated Values" color="#b9302e">
+                	<begin><regex>#{</regex></begin>
+                	<end><regex>}</regex></end>	
+                </state>
             </state>
 
             <!-- 
