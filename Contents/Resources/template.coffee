@@ -9,7 +9,7 @@ $(document).ready ->
 This is a block comment
 ###
 
-
+answer = 4 + 5 # This is a comment at the end of a line
   
   
   
