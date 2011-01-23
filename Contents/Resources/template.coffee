@@ -34,3 +34,16 @@ cubes = (math.cube num for num in list)
 ###
 Block comment
 ###
+
+apple = `function(){
+  Apple = function(){
+    this.family = "Granny Smith";
+    this.peel = function(){
+      // Peel this apple.
+    }
+  }
+  
+  return Apple.new();
+  
+  
+}`
