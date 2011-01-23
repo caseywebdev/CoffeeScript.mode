@@ -2,6 +2,18 @@
 $(document).ready ->
   alert 'ready!'
   
+  
+# This is a single line comment
+
+###
+This is a block comment
+###
+
+
+  
+  
+  
+  
 # Assignment:
 number   = 42
 opposite = true     # comment at end of line
@@ -37,9 +49,7 @@ alert "I knew it!" if elvis?
 # Array comprehensions:
 cubes = (math.cube num for num in list) 
 
-###
-Block comment
-###
+
 
 apple = `function(){
   Apple = function (){

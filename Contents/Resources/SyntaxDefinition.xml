@@ -84,8 +84,6 @@
                 <string>switch</string>
                 <string>case</string>
                 <string>new</string>
-                <string>var</string>
-                <string>function</string>
                 <string>return</string>
                 <string>this</string>
                 <string>delete</string>
