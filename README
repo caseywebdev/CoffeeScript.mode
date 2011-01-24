@@ -9,7 +9,7 @@
     Special thanks to Bredeshwar's Sass.Mode.
     I used it for reference while developing this mode.
 
-
+    Checkout template.coffee file to see what works and what doesn't.
 
 
   = Known issues =
@@ -45,7 +45,7 @@
     Maybe we should colorize characters like +, -, *, /, and ()ÐÐparens only if not preceding a function
     
   - Colorize boolean operators?
-    Could distinguish if, else, unless, and, or, &&, ||, ==, <, > from other types of operators
+    Could distinguish if, else, unless, and, or, not, &&, ||, ==, <, >, ?, ?= from other types of operators
     
   - Colorize =, :, or=
     These symbols set one thing equal to another.
