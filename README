@@ -5,7 +5,7 @@
     It's still under development (in my spare time).
     
     I mostly based it on the built-in JavaScript Mode.
-    Special thanks to Bredeshwar's Sass.Mode——
+    Special thanks to Bredeshwar's Sass.Mode;
     I used it for reference while developing this mode.
 
     Checkout template.coffee file (in Coda with the mode installed) to see what works and what doesn't.
