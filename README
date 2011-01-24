@@ -38,6 +38,9 @@
     (args) ->
     (args) =>
     
+    Should we colorize args inside the function 
+    the same as the function? Differently? treat as "default?"
+    
   - Colorize mathematical operators?
     Maybe we should colorize characters like +, -, *, /, and ()ÐÐparens only if not preceding a function
     

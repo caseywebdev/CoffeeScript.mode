@@ -24,7 +24,7 @@ number = -42 if opposite
 # Strings
 double_quote_string = "This string is in double quotes"
 single_quote_string = 'This string is in single quotes'
-string_segment = 'interpolated in-line'
+string_segment      = 'interpolated in-line'
 interpolated_string = "This string is #{ string_segment }"
 
 # Functions:
