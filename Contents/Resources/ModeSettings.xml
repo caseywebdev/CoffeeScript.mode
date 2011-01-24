@@ -3,8 +3,6 @@
   <template>template.coffee</template>   <!-- Provide a template for File->new -->
   <recognition>
     <extension>coffee</extension>                   <!-- Add file extensions -->
-    <extension casesensitive="no">C</extension> <!-- Add case sensitive file extensions -->
-<!--    <filename>untitled</filename>                <!-- Add filenames -->
-<!--    <regex>\A#!/usr/bin/(env )?perl</regex>      <!-- Add regex of content -->
+    <extension casesensitive="no">coffee</extension> <!-- Add case sensitive file extensions -->
   </recognition>
 </settings>
