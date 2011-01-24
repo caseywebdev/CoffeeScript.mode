@@ -44,7 +44,7 @@
     the same as the function? Differently? treat as "default?"
     
   - Colorize mathematical operators?
-    Maybe we should colorize characters like +, -, *, /, and ()ÐÐparens only if not preceding a function
+    Maybe we should colorize characters like +, -, *, /, and ()--parens only if not preceding a function
     
   - Colorize boolean operators?
     Could distinguish if, else, unless, and, or, not, &&, ||, ==, <, >, ?, ?= from other types of operators
