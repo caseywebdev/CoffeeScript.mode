@@ -16,7 +16,7 @@ answer = 4 + 5 # This is a comment at the end of a line
   
 # Assignment:
 number   = 42
-opposite = true     # comment at end of line
+opposite = true
 
 # Conditions:
 number = -42 if opposite
@@ -63,3 +63,4 @@ apple = `function(){
   
   return Apple.new();
 }`
+

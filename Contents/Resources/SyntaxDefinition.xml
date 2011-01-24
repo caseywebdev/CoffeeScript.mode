@@ -121,7 +121,7 @@
                 <end><regex>###</regex></end>
             </state>
             
-            <state id="SingleComment" color="#236E25" font-style="italic">
+            <state id="Single Comment" color="#236E25" font-style="italic">
                 <begin><regex>#</regex></begin>
                 <end><regex>[\n\r]</regex></end>
             </state>
@@ -140,7 +140,7 @@
                 </state>
             </state>
             
-            <state id="SingleString" color="#760f15">
+            <state id="Single String" color="#760f15">
                 <begin><regex>'</regex></begin>
                 <end><regex>(((?&lt;!\\)(\\\\)*)|^)'</regex></end>
                 

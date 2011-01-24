@@ -1,2 +1,58 @@
-This is a syntax coloring mode for Coda and SubEthaEdit.
-It will be, rather. Now it's a mode template in metamorphosis.
+  = Read me =
+
+    This is a Coda/SubEthaEdit syntax coloring mode for the CoffeeScript language.
+    It's plenty rough around the edges, but it's usable.
+    
+    It's still under development (in my spare time).
+    
+    I mostly based it on the built-in JavaScript Mode.
+    Special thanks to Bredeshwar's Sass.Mode.
+    I used it for reference while developing this mode.
+
+
+
+
+  = Known issues =
+  
+  - Comment bug:
+    When you press Command + / on a line consisting of "###",
+    Coda will throw a grumpy error, and suggest you shut it down.
+    No clue what's causing this.
+    May have to track down the guys at Coding Monkeys.
+
+
+
+
+
+  = To-do =
+  
+  - Choose colors
+    I have been using same colors as Javascript mode.
+    Need to choose colors in an intentional, designerly fashion.
+  
+
+  
+  - Colorize functions:
+    ->
+    =>
+    (args) ->
+    (args) =>
+    
+  - Colorize mathematical operators?
+    Maybe we should colorize characters like +, -, *, /, and ()ÐÐparens only if not preceding a function
+    
+  - Colorize boolean operators?
+    Could distinguish if, else, unless, and, or, &&, ||, ==, <, > from other types of operators
+    
+  - Colorize =, :, or=
+    These symbols set one thing equal to another.
+    Maybe they should be set apart.
+    or= might fit better with boolean operators, 
+    or maybe we color 'or'like a boolean operator and '=' like an equality operator
+  
+  
+  
+  - Can we have single line auto-comment?
+    Now, Command + '/' keyboard shortcut wraps a single line in "### ###".
+    I would prefer it prepended single line comments with "#",
+    and multi-line comments with "### ###"
