@@ -122,8 +122,8 @@
     
     
             <state id="Function" color="#400080" font-weight="bold">
-                <begin><regex>[^\n\r][\w*]?\w*\s*=[^\n\r]*[-=]></regex></begin>
-                <end><regex>[\n\r]</regex></end>
+                <begin><regex>[^\n\r][\w*]?\w*\s*[=:][^\n\r]*[-=]></regex></begin>
+                <end><regex>[\s]</regex></end>
             </state>
     
     
