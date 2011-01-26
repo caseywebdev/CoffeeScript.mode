@@ -69,31 +69,50 @@
 
               <keywords id="Keywords" color="#881350" useforautocomplete="yes" casesensitive="no"> 
             	<!-- STUDIO added case insensitive -->
+				
+				<!-- Conditionals -->
                 <string>if</string>
                 <string>unless</string>
                 <string>else</string>
+                <string>switch</string>
+                <string>when</string>
+				<string>then</string>
+				
+				<!-- Loops -->
                 <string>for</string>
-                <string>in</string>
                 <string>while</string>
+				<string>until</string>
                 <string>do</string>
-                <string>continue</string>
+                
+				<!-- Objects and scope -->
+				<string>new</string>
+                <string>this</string>
+				
+				<!-- Flow -->
                 <string>break</string>
-                <string>with</string>
+				<string>continue</string>
+				<string>return</string>
+				
+				<!-- Errors -->
                 <string>try</string>
                 <string>catch</string>
-                <string>switch</string>
-                <string>case</string>
-                <string>new</string>
-                <string>return</string>
-                <string>this</string>
-                <string>delete</string>
+				<string>throw</string>
+				
+				<!-- Operators and Aliases -->
+				<string>is</string>
+				<string>isnt</string>
+				<string>not</string>
+				<string>and</string>
+				<string>or</string>
                 <string>true</string>
+				<string>yes</string>
+				<string>on</string>
                 <string>false</string>
-                <string>void</string>
-                <string>throw</string>
-                <string>typeof</string>
-                <string>const</string>
-                <string>default</string>
+				<string>no</string>
+				<string>of</string>
+				<string>off</string>
+				<string>in</string>
+				
             </keywords>
 
             <keywords id="Other keywords" color="#400080" font-weight="bold">
@@ -102,6 +121,10 @@
     
     
     
+            <state id="Function" color="#400080" font-weight="bold">
+                <begin><regex>[^\n\r][\w*]?\w*\s*=[^\n\r]*[-=]></regex></begin>
+                <end><regex>[\n\r]</regex></end>
+            </state>
     
     
             <keywords id="Numbers" color="#00f" useforautocomplete="no">

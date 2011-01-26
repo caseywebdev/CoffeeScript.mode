@@ -37,7 +37,7 @@
                  expression.
         -->
         
-        <regex>(function[^\n\r]*)</regex>
+        <regex>(\w*\s*=[^\n\r]*[-=]>[^\n\r]*)</regex>
 
         <!-- 
             The postprocess tag specifies the find and replaces that should
