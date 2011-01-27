@@ -121,25 +121,26 @@
     
     
     
-            <state id="Function" color="#400080" font-weight="bold">
-                <begin><regex>[-=]></regex></begin>
+            <state id="Function" color="#4262dc" font-weight="bold">
+                <begin><regex>(?:[\(][\w\s\.\,\$]*[\)][\s])?[-=]></regex></begin>
                 <end><regex>[\s]</regex></end>
+				
+                <state id="Arguments" color="#400080" font-weight="normal">
+                	<begin><regex>\(</regex></begin>
+                	<end><regex>\)</regex></end>
+                </state>
             </state>
-			
-<!--            <state id="Function" color="#400080" font-weight="bold">
-                <begin><regex>[^\n\r][\w*]?\w*\s*[=:][^\n\r]*[-=]></regex></begin>
-                <end><regex>[\s]</regex></end>
-            </state>-->
+
 			
             <state id="Property" color="#400080" font-weight="bold">
-                <begin><regex>[^\n\r][\w\.]*?\w*\s*[=:]</regex></begin>
+                <begin><regex>[^\n\r][\w]*?[\.]*?\w*\s*[=:]</regex></begin>
                 <end><regex>\s</regex></end>
             </state>
     
     
-            <keywords id="Numbers" color="#00f" useforautocomplete="no">
+<!--            <keywords id="Numbers" color="#00f" useforautocomplete="no">
         				<regex>(?&lt;=[^\w\d]|^)(((([0-9]+\.[0-9]*)|(\.[0-9]+))([eE][+\-]?[0-9]+)?[fFlL]?)|((([1-9][0-9]*)|0[0-7]*|(0[xX][0-9a-fA-F]+))(([uU][lL]?)|([lL][uU]?))?))(?=[^\w\d]|$)</regex>
-            </keywords>
+            </keywords> -->
             
             <keywords id="Characters" color="#00f" useforautocomplete="no">
         				<regex>('.')</regex>
