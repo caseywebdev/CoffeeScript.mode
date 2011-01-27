@@ -7,6 +7,9 @@
       PASSING
 ------------------###
   
+  
+### COMMENTS ###
+  
 # A singe line comment should be colorized as a comment
 
 ###
@@ -17,15 +20,36 @@ answer = 4 + 5 # A comment trailing code should be colorized as a comment
   
   
   
-# Strings
+### STRINGS ###
+
 double_quote_string = "This string is in double quotes"
 single_quote_string = 'This string is in single quotes'
 string_segment      = 'interpolated in-line'
 interpolated_string = "This string is #{ string_segment }"
   
   
+  
+### FUNCTIONS ###
 
-# Embedded Javascript should be colorized as javascript
+# A function with no arguments should be colorized as a function
+$(document).ready ->
+  alert 'ready!'
+
+# A function with arguments should be colorized as a function
+square = (x) -> x * x
+
+# A function binding with no arguments should be colorized as a function
+$('.element').bind 'click', (event) =>
+  @customer.purchase @cart
+
+# A function binding with arguments should be colorized as a function
+bound_function = =>
+  # bound function code
+  
+  
+
+### Embedded javascript ###
+
 apple = `function(){
   Apple = function (){
     this.family = "Granny Smith";
@@ -47,22 +71,7 @@ apple = `function(){
       FAILING
 ------------------###
 
-# Functions should be colorized as functions:
 
-# A function with no arguments should be colorized as a function
-$(document).ready ->
-  alert 'ready!'
-
-# A function with arguments should be colorized as a function
-square = (x) -> x * x
-
-# A function binding with no arguments should be colorized as a function
-$('.element').bind 'click', (event) =>
-  @customer.purchase @cart
-
-# A function binding with arguments should be colorized as a function
-bound_function = =>
-  # bound function code
 
   
   
