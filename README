@@ -34,14 +34,12 @@
   
 
   
-  - Colorize functions:
-    ->
-    =>
-    (args) ->
-    (args) =>
-    
+  - Colorize function arguments:
     Should we colorize args inside the function 
     the same as the function? Differently? treat as "default?"
+	
+  - Colorize instance variables
+	Make @vars stand out.
     
   - Colorize mathematical operators?
     Maybe we should colorize characters like +, -, *, /, and ()--parens only if not preceding a function
@@ -50,10 +48,8 @@
     Could distinguish if, else, unless, and, or, not, &&, ||, ==, <, >, ?, ?= from other types of operators
     
   - Colorize =, :, or=
-    These symbols set one thing equal to another.
-    Maybe they should be set apart.
-    or= might fit better with boolean operators, 
-    or maybe we color 'or'like a boolean operator and '=' like an equality operator
+    These have the same appearance as the vars they come after.
+	This is fine for now, but I may want to change the color slightly.
   
   
   
