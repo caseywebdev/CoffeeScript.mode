@@ -10,15 +10,19 @@
 
     Checkout template.coffee file (in Coda with the mode installed) to see what works and what doesn't.
 
-    = Installation =
 
-   Download and unpack either the ZIP or TAR version of the Django-Template mode.
-   - Coda:
-   Manually copy the CoffeeScript.mode directory into  ~/Library/Application\ Support/Coda/Modes/.
+  = Installation =
 
-   - SubEthaEdit:
-   Open the Django-Template.mode file using the File > Open command or by dragging the CoffeeScript.mode 
-   file onto the SubEthaEdit application icon in the dock.
+  - Download and unpack either the ZIP or TAR version of the CoffeeScript mode.
+
+  - Coda:
+	Manually copy the CoffeeScript.mode directory into ~/Library/Application\ Support/Coda/Modes/.
+
+  - SubEthaEdit:
+	Open the CoffeeScript.mode file from within SubEthaEdit using the File > Open command 
+	or by dragging the CoffeeScript.mode file onto the SubEthaEdit application icon in the dock.
+
+
 
   = Known issues =
   
@@ -27,8 +31,6 @@
     Coda will throw a grumpy error, and suggest you shut it down.
     No clue what's causing this.
     May have to track down the guys at Coding Monkeys.
-
-
 
 
 
