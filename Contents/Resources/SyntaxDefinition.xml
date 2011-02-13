@@ -114,10 +114,6 @@
 				<string>in</string>
 				
             </keywords>
-
-            <keywords id="Other keywords" color="#400080" font-weight="bold">
-
-            </keywords>
     
     
     
@@ -133,7 +129,7 @@
 
 			
             <state id="Property" color="#400080" font-weight="bold">
-                <begin><regex>[^\n\r][\w]*?[\.]*?\w*\s*[=:]</regex></begin>
+                <begin><regex>[^\n\r][\w]*?[\.]*?\w*\s*[\+\-\*\/]?[=:]</regex></begin>
                 <end><regex>\s</regex></end>
             </state>
     
