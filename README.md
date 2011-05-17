@@ -19,7 +19,7 @@ Installation
   Open the CoffeeScript.mode file from within SubEthaEdit using the File > Open command 
   or by dragging the CoffeeScript.mode file onto the SubEthaEdit application icon in the dock.
  
- 
+Chendrix made an alternate (light-on-dark color scheme)[https://github.com/chendrix/Specials-Board] for those who prefer the dark side.
  
 Known issues
 ------------
