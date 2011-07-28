@@ -70,12 +70,16 @@ apple = `function(){
 ###------------------
       FAILING
 ------------------###
+r = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/g
 
-
-
+# Operators
+a = 30 + 70
+s = 62 - 10
+m = 5 * 5
+d = 10/2      #division symbol should not style the rest of the doc as a regex
   
   
-  
+
   
   
 ###------------------
