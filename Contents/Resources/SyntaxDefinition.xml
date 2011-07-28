@@ -182,8 +182,8 @@
             
             
             <state id="RegularExpression" color="#760f15" font-style="italic">
-                <begin><regex>/</regex></begin>
-                <end><regex>/[imgy]{0,4}</regex></end>
+                <begin><regex>(?i)(?&lt;=[=(,:\+~]|^|return|;)\s*/(?![/*+{}?])</regex></begin>
+                <end><regex>/[cgimosx]*</regex></end>
             </state>
             
             
