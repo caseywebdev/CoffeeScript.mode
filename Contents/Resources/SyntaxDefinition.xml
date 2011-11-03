@@ -9,8 +9,8 @@
     </head>
 
     <states>
-    
-        <!-- 
+
+        <!--
         The <default> tag specifies what is colored within the default state (see above).
         It features the following attributes, all optional if not noted otherwise:
             id
@@ -37,12 +37,12 @@
                 a string description of the type. currently only the values
                 "string" and "comment" have meaning and cause bracket matching
                 and syntax highlighting to ignore these areas of text
-                
-        -->    
-    
-        <default id="Base" color="#0f0" inverted-color="#f0f">
 
-            <!-- 
+        -->
+
+        <default id="Base" color="#363636" inverted-color="#f0f">
+
+            <!--
             The <keywords> tag specifies keyword groups within the current state.
             It features the following attributes, all optional if not noted otherwise:
                 id
@@ -65,133 +65,123 @@
                 useforautocomplete
                     yes     Add this group's strings to the autocomplete dictionary (default)
                     no      Don't add to autocomplete dictionary
-            -->    
+            -->
 
-              <keywords id="Keywords" color="#881350" useforautocomplete="yes" casesensitive="no"> 
-            	<!-- STUDIO added case insensitive -->
-				
-				<!-- Conditionals -->
+            <keywords id="Keywords" color="#000" font-weight="bold" useforautocomplete="yes" casesensitive="no">
+            <!-- STUDIO added case insensitive -->
+
                 <string>if</string>
                 <string>unless</string>
                 <string>else</string>
                 <string>switch</string>
                 <string>when</string>
-				<string>then</string>
-				
-				<!-- Loops -->
+                <string>then</string>
+
+                <!-- Loops -->
                 <string>for</string>
                 <string>while</string>
-				<string>until</string>
+                <string>until</string>
                 <string>do</string>
-                
-				<!-- Objects and scope -->
-				<string>new</string>
+
+                <!-- Objects and scope -->
+                <string>new</string>
                 <string>this</string>
-				
-				<!-- Flow -->
+
+                <!-- Flow -->
                 <string>break</string>
-				<string>continue</string>
-				<string>return</string>
-				
-				<!-- Errors -->
+                <string>continue</string>
+                <string>return</string>
+
+                <!-- Errors -->
                 <string>try</string>
                 <string>catch</string>
-				<string>throw</string>
-				
-				<!-- Operators and Aliases -->
-				<string>is</string>
-				<string>isnt</string>
-				<string>not</string>
-				<string>and</string>
-				<string>or</string>
+                <string>throw</string>
+
+                <!-- Operators and Aliases -->
+                <string>is</string>
+                <string>isnt</string>
+                <string>not</string>
+                <string>and</string>
+                <string>or</string>
                 <string>true</string>
-				<string>yes</string>
-				<string>on</string>
+                <string>yes</string>
+                <string>on</string>
                 <string>false</string>
-				<string>no</string>
-				<string>of</string>
-				<string>off</string>
-				<string>in</string>
-				
+                <string>no</string>
+                <string>of</string>
+                <string>off</string>
+                <string>in</string>
             </keywords>
-    
-    
-    
-            <state id="Function" color="#4262dc" font-weight="bold">
+
+
+
+            <state id="Function" color="#0077ac" font-weight="bold">
                 <begin><regex>(?:[\(][\w\s\.\,\$]*[\)][\s])?[-=]></regex></begin>
                 <end><regex>[\s]</regex></end>
-				
-                <state id="Arguments" color="#400080" font-weight="normal">
-                	<begin><regex>\(</regex></begin>
-                	<end><regex>\)</regex></end>
-                </state>
             </state>
 
-			
-            <state id="Property" color="#400080" font-weight="bold">
-                <begin><regex>[^\n\r][\w]*?[\.]*?\w*\s*[\+\-\*\/]?[=:]</regex></begin>
-                <end><regex>\s</regex></end>
-            </state>
-    
-    
-<!--            <keywords id="Numbers" color="#00f" useforautocomplete="no">
-        				<regex>(?&lt;=[^\w\d]|^)(((([0-9]+\.[0-9]*)|(\.[0-9]+))([eE][+\-]?[0-9]+)?[fFlL]?)|((([1-9][0-9]*)|0[0-7]*|(0[xX][0-9a-fA-F]+))(([uU][lL]?)|([lL][uU]?))?))(?=[^\w\d]|$)</regex>
-            </keywords> -->
-            
-            <keywords id="Characters" color="#00f" useforautocomplete="no">
-        				<regex>('.')</regex>
+
+            <keywords id="Numbers" color="#89a700" useforautocomplete="no">
+              <regex>(?&lt;=[^\w\d]|^)(((([0-9]+\.[0-9]*)|(\.[0-9]+))([eE][+\-]?[0-9]+)?[fFlL]?)|((([1-9][0-9]*)|0[0-7]*|(0[xX][0-9a-fA-F]+))(([uU][lL]?)|([lL][uU]?))?))(?=[^\w\d]|$)</regex>
             </keywords>
-    
-    
-    
-    
-    
-            <state id="Comment" color="#236E25" font-style="italic">
+
+
+            <keywords id="Properties" color="#dd6000" useforautocomplete="no">
+              <regex>(@\w*)</regex>
+            </keywords>
+
+            <keywords id="Properties" color="#dd6000" useforautocomplete="no">
+              <regex>(\w+:)</regex>
+            </keywords>
+
+            <keywords id="Classes" color="#aa0c00" useforautocomplete="no">
+              <regex>(\b[A-Z]\w*)</regex>
+            </keywords>
+
+            <state id="Comment" color="#8b8b8b" font-style="italic">
                 <begin><regex>###</regex></begin>
                 <end><regex>###</regex></end>
             </state>
-            
-            <state id="Single Comment" color="#236E25" font-style="italic">
+
+
+            <state id="Single Comment" color="#8b8b8b" font-style="italic">
                 <begin><regex>#</regex></begin>
                 <end><regex>[\n\r]</regex></end>
             </state>
-            
-            
-            
-            
-            
-            <state id="String" color="#760f15">
+
+
+            <state id="String" color="#009e00">
                 <begin><regex>"</regex></begin>
                 <end><regex>(((?&lt;!\\)(\\\\)*)|^)"</regex></end>
-                
-                <state id="Interpolated Values" color="#b9302e">
-                	<begin><regex>#{</regex></begin>
-                	<end><regex>}</regex></end>	
+
+                <state id="Interpolated Values" color="#009e00" font-weight="bold">
+                  <begin><regex>#{</regex></begin>
+                  <end><regex>}</regex></end>	
                 </state>
             </state>
-            
-            <state id="Single String" color="#760f15">
+
+            <state id="Single String" color="#009e00">
                 <begin><regex>'</regex></begin>
                 <end><regex>(((?&lt;!\\)(\\\\)*)|^)'</regex></end>
-                
-                <state id="Interpolated Values" color="#b9302e">
-                	<begin><regex>#{</regex></begin>
-                	<end><regex>}</regex></end>	
+
+                <state id="Interpolated Values" color="#009e00" font-weight="bold">
+                  <begin><regex>#{</regex></begin>
+                  <end><regex>}</regex></end>
                 </state>
             </state>
-            
-            
+
+
             <state id="RegularExpression" color="#760f15" font-style="italic">
                 <begin><regex>(?i)(?&lt;=[=(,:\+~]|^|return|;)\s*/(?![/*+{}?])</regex></begin>
                 <end><regex>/[cgimosx]*</regex></end>
             </state>
-            
-            
+
+
 
             <state id="Inline Javascript" color="#000" usesymbolsfrommode="Javascript" useautocompletefrommode="Javascript">
                 <begin><regex>`</regex></begin>
                 <end><regex>`</regex></end>
-    
+
                 <import mode="Javascript" />
 
                 <keywords id="Script Tags"  color="#881280" font-style="italic">
@@ -202,16 +192,15 @@
                 <state id="Opening Script Tag" color="#881280" font-style="italic" usesymbolsfrommode="HTML" useautocompletefrommode="HTML">
                     <begin><regex>\Ascript</regex></begin>
                     <end><regex>&gt;</regex></end>
-        
+
                     <import mode="XML" state="Tags" />
                 </state>
-                
+
             </state>
 
 
-
         </default>
-        
+
     </states>
 
 </syntax>

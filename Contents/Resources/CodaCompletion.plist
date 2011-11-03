@@ -4,10 +4,8 @@
 <dict>
 	<key>Comments</key>
 	<dict>
-		<key>EndTag</key>
-		<string>###</string>
 		<key>StartTag</key>
-		<string>###</string>
+		<string>#</string>
 	</dict>
 </dict>
 </plist>
