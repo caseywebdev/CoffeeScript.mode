@@ -115,26 +115,26 @@
 
 
 
-            <state id="Function" color="#0077ac" font-weight="bold">
+            <state id="Function" color="#005e97" font-weight="bold">
                 <begin><regex>(?:[\(][\w\s\.\,\$]*[\)][\s])?[-=]></regex></begin>
                 <end><regex>[\s]</regex></end>
             </state>
 
 
-            <keywords id="Numbers" color="#89a700" useforautocomplete="no">
+            <keywords id="Numbers" color="#008a6c" useforautocomplete="no">
               <regex>(?&lt;=[^\w\d]|^)(((([0-9]+\.[0-9]*)|(\.[0-9]+))([eE][+\-]?[0-9]+)?[fFlL]?)|((([1-9][0-9]*)|0[0-7]*|(0[xX][0-9a-fA-F]+))(([uU][lL]?)|([lL][uU]?))?))(?=[^\w\d]|$)</regex>
             </keywords>
 
 
-            <keywords id="Properties" color="#dd6000" useforautocomplete="no">
+            <keywords id="Properties" color="#a85400" useforautocomplete="no">
               <regex>(@\w*)</regex>
             </keywords>
 
-            <keywords id="Properties" color="#dd6000" useforautocomplete="no">
-              <regex>(\w+:)</regex>
+            <keywords id="Properties" color="#a85400" useforautocomplete="no">
+              <regex>(\w+(\s+)?:)</regex>
             </keywords>
 
-            <keywords id="Classes" color="#aa0c00" useforautocomplete="no">
+            <keywords id="Classes" color="#961a00" useforautocomplete="no">
               <regex>(\b[A-Z]\w*)</regex>
             </keywords>
 
@@ -150,54 +150,26 @@
             </state>
 
 
-            <state id="String" color="#009e00">
+            <state id="String" color="#357e00">
                 <begin><regex>"</regex></begin>
                 <end><regex>(((?&lt;!\\)(\\\\)*)|^)"</regex></end>
 
-                <state id="Interpolated Values" color="#009e00" font-weight="bold">
+                <state id="Interpolated Values" color="#37aa00" font-weight="bold">
                   <begin><regex>#{</regex></begin>
                   <end><regex>}</regex></end>	
                 </state>
             </state>
 
-            <state id="Single String" color="#009e00">
+            <state id="Single String" color="#357e00">
                 <begin><regex>'</regex></begin>
                 <end><regex>(((?&lt;!\\)(\\\\)*)|^)'</regex></end>
-
-                <state id="Interpolated Values" color="#009e00" font-weight="bold">
-                  <begin><regex>#{</regex></begin>
-                  <end><regex>}</regex></end>
-                </state>
             </state>
 
 
-            <state id="RegularExpression" color="#760f15" font-style="italic">
+            <state id="RegularExpression" color="#880047" font-style="italic">
                 <begin><regex>(?i)(?&lt;=[=(,:\+~]|^|return|;)\s*/(?![/*+{}?])</regex></begin>
                 <end><regex>/[cgimosx]*</regex></end>
             </state>
-
-
-
-            <state id="Inline Javascript" color="#000" usesymbolsfrommode="Javascript" useautocompletefrommode="Javascript">
-                <begin><regex>`</regex></begin>
-                <end><regex>`</regex></end>
-
-                <import mode="Javascript" />
-
-                <keywords id="Script Tags"  color="#881280" font-style="italic">
-                    <regex>(\A&lt;\Z)</regex>
-                    <regex>(&lt;/script[^&gt;]*&gt;)</regex>
-                </keywords>
-
-                <state id="Opening Script Tag" color="#881280" font-style="italic" usesymbolsfrommode="HTML" useautocompletefrommode="HTML">
-                    <begin><regex>\Ascript</regex></begin>
-                    <end><regex>&gt;</regex></end>
-
-                    <import mode="XML" state="Tags" />
-                </state>
-
-            </state>
-
 
         </default>
 
