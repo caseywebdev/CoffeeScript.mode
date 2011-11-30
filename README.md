@@ -11,6 +11,7 @@ Installation
 ============
  
 - Download and unpack either the ZIP or TAR version of the CoffeeScript mode.
+- Rename the unzipped directory to 'CoffeeScript.mode'.
 - Coda:
   Manually copy the CoffeeScript.mode directory into ~/Library/Application\ Support/Coda/Modes/.
 - SubEthaEdit:
