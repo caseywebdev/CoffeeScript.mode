@@ -3,7 +3,7 @@ Read me
  
 This is a Coda/SubEthaEdit syntax coloring mode for the CoffeeScript language.
  
-Special thanks to brajeshwar's Sass.Mode and jashkenas' TextMate bundle;
+Special thanks to brajeshwar's Sass.Mode and jashkenas' TextMate bundle--       
 I used them for reference while developing this mode.
  
  
