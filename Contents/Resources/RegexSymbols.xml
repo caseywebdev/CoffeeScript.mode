@@ -7,11 +7,11 @@
     </blocks>
 
     <symbol id="Classes" image="SymbolC" indentation="0" ignoreblocks="yes">
-        <regex>(?&lt;=[\n\r]|^)[ \t]*class[ \t]+([\w\d_$]+)[ \t]*(?:\([^\)]*\))?[ \t]*</regex>
+        <regex>(?&lt;=[\n\r]|^)[ \t]*class[ \t]+(?:[\w\d_\$]+\.)*([\w\d_\$]+)[ \t]*(?:\([^\)]*\))?[ \t]*</regex>
     </symbol>
 
     <symbol id="Functions" image="SymbolF()" indentation="1" ignoreblocks="yes">
-        <regex>(?&lt;=[\n\r]|^)[ \t]+([\w\d_$]+):[ \t]+\([\w\d\s,]*\)[ \t]+[-=]></regex>
+        <regex>(?&lt;=[\n\r]|^)[ \t]*(@*[\w\d_\$]+)[ \t]*[: =][ \t]*\(?[\w\d\s,]*\)?[ \t]+[-=]></regex>
     </symbol>
 
     <!-- STUDIO -->
