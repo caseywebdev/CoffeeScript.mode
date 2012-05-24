@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <settings>
-  <template>template.coffee</template>   <!-- Provide a template for File->new -->
   <recognition>
-    <extension>coffee</extension>                   <!-- Add file extensions -->
-    <extension casesensitive="no">coffee</extension> <!-- Add case sensitive file extensions -->
+    <extension>coffee</extension>
     <filename>Cakefile</filename>
   </recognition>
 </settings>

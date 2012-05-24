@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE syntax SYSTEM "syntax.dtd">
 <syntax>
 
     <head>
@@ -9,8 +10,9 @@
     </head>
 
     <states>
-
+        
         <!--
+        
         The <default> tag specifies what is colored within the default state (see above).
         It features the following attributes, all optional if not noted otherwise:
             id
@@ -40,7 +42,7 @@
 
         -->
 
-        <default id="Base" color="#363636" inverted-color="#f0f">
+        <default id="Base" color="#363636" inverted-color="#f0f" scope="meta.default">
 
             <!--
             The <keywords> tag specifies keyword groups within the current state.
@@ -67,7 +69,7 @@
                     no      Don't add to autocomplete dictionary
             -->
 
-            <keywords id="Keywords" color="#000" font-weight="bold" useforautocomplete="yes" casesensitive="no">
+            <keywords id="Keywords" useforautocomplete="yes" scope="keyword.control">
             <!-- STUDIO added case insensitive -->
 
                 <string>if</string>
@@ -86,6 +88,8 @@
                 <!-- Objects and scope -->
                 <string>new</string>
                 <string>this</string>
+                <string>class</string>
+                <string>extends</string>
 
                 <!-- Flow -->
                 <string>break</string>
@@ -95,6 +99,7 @@
                 <!-- Errors -->
                 <string>try</string>
                 <string>catch</string>
+                <string>finally</string>
                 <string>throw</string>
 
                 <!-- Operators and Aliases -->
@@ -103,70 +108,74 @@
                 <string>not</string>
                 <string>and</string>
                 <string>or</string>
-                <string>true</string>
-                <string>yes</string>
-                <string>on</string>
-                <string>false</string>
-                <string>no</string>
                 <string>of</string>
-                <string>off</string>
                 <string>in</string>
             </keywords>
 
 
 
-            <state id="Function" color="#005e97" font-weight="bold">
+            <state id="Function" scope="language.function">
                 <begin><regex>(?:[\(][\w\s\.\,\$]*[\)][\s])?[-=]></regex></begin>
                 <end><regex>[\s]</regex></end>
             </state>
 
 
-            <keywords id="Numbers" color="#008a6c" useforautocomplete="no">
+            <keywords id="Numbers" scope="constant.numeric">
               <regex>(?&lt;=[^\w\d]|^)(((([0-9]+\.[0-9]*)|(\.[0-9]+))([eE][+\-]?[0-9]+)?[fFlL]?)|((([1-9][0-9]*)|0[0-7]*|(0[xX][0-9a-fA-F]+))(([uU][lL]?)|([lL][uU]?))?))(?=[^\w\d]|$)</regex>
             </keywords>
-
-
-            <keywords id="Properties" color="#a85400" useforautocomplete="no">
-              <regex>(@\w*)</regex>
+            
+            <keywords id="Number Literals" useforautocomplete="yes" scope="constant.numeric.keyword">
+                <string>true</string>
+                <string>yes</string>
+                <string>on</string>
+                <string>false</string>
+                <string>no</string>
+                <string>off</string>
+                <string>null</string>
+                <string>NaN</string>
+                <string>infinity</string>
+                <string>undefined</string>
             </keywords>
-
-            <keywords id="Properties" color="#a85400" useforautocomplete="no">
+            
+            <keywords id="Properties" scope="keyword.type">
+              <regex>(@\w*)</regex>
               <regex>(\w+(\s+)?:)</regex>
             </keywords>
 
-            <keywords id="Classes" color="#961a00" useforautocomplete="no">
+            <keywords id="Classes" scope="support">
               <regex>(\b[A-Z]\w*)</regex>
             </keywords>
 
-            <state id="Comment" color="#8b8b8b" font-style="italic">
+            <state id="Comment" scope="comment">
                 <begin><regex>###</regex></begin>
                 <end><regex>###</regex></end>
             </state>
 
 
-            <state id="Single Comment" color="#8b8b8b" font-style="italic">
+            <state id="Single Comment" scope="comment">
                 <begin><regex>#</regex></begin>
                 <end><regex>[\n\r]</regex></end>
             </state>
 
 
-            <state id="String" color="#357e00">
+            <state id="String" scope="string">
                 <begin><regex>"</regex></begin>
                 <end><regex>(((?&lt;!\\)(\\\\)*)|^)"</regex></end>
 
-                <state id="Interpolated Values" color="#37aa00" font-weight="bold">
+                <state id="Interpolated Values" scope="style.value.keyword">
                   <begin><regex>#{</regex></begin>
                   <end><regex>}</regex></end>	
                 </state>
+                
             </state>
 
-            <state id="Single String" color="#357e00">
+            <state id="Single String" scope="string">
                 <begin><regex>'</regex></begin>
                 <end><regex>(((?&lt;!\\)(\\\\)*)|^)'</regex></end>
             </state>
 
 
-            <state id="RegularExpression" color="#880047" font-style="italic">
+            <state id="RegularExpression" scope="string.regex">
                 <begin><regex>(?i)(?&lt;=[=(,:\+~]|^|return|;)\s*/(?![/*+{}?])</regex></begin>
                 <end><regex>/[cgimosx]*</regex></end>
             </state>

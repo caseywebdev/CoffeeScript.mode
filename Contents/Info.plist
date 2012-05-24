@@ -3,18 +3,20 @@
 <plist version="0.1">
 <dict>
 	<key>CFBundleIdentifier</key>
-	<string>SEEMode.CoffeeScript</string> <!-- Change bundle identifier. Must start with "SEEMode." -->
+	<string>SEEMode.CoffeeScript</string>
 	<key>CFBundleName</key>
-	<string>CoffeeScript</string> <!-- Change bundle name. -->
-    <key>CFBundleShortVersionString</key>
+	<string>CoffeeScript</string>
+	<key>CFBundleShortVersionString</key>
 	<string>0.1</string>
 	<key>CFBundleVersion</key>
 	<string>0.1</string>
-    <key>CFBundleGetInfoString</key>
-	<string>0.1, Copyright Sean Durham 2010</string> <!-- Change author. -->
+	<key>CFBundleGetInfoString</key>
+	<string>0.1, Copyright Sean Durham 2010</string>
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
+	<key>SEEMinimumEngineVersion</key>
+	<string>3.5</string>
 </dict>
 </plist>
