@@ -1,11 +1,9 @@
-Read me
-=======
- 
 This is a Coda/SubEthaEdit syntax coloring mode for the CoffeeScript language.
  
-Special thanks to brajeshwar's Sass.Mode and jashkenas' TextMate bundle--       
-I used them for reference while developing this mode.
- 
+*Good news: Coda 2 is out!*
+*Bad news: This mode is not compatible with it yet! I hope to get it working soon.*
+
+I'll see what I can do 
  
 Installation
 ============
@@ -17,8 +15,3 @@ Installation
 - SubEthaEdit:
   Open the CoffeeScript.mode file from within SubEthaEdit using the File > Open command 
   or by dragging the CoffeeScript.mode file onto the SubEthaEdit application icon in the dock.
- 
-Extras
-------------
-Chendrix made an alternate [light-on-dark color scheme](https://github.com/chendrix/Specials-Board) for those who prefer the dark side.
-
