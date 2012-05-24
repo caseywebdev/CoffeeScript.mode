@@ -115,8 +115,8 @@
 
 
             <state id="Function" scope="language.function">
-                <begin><regex>(?:[\(][\w\s\.\,\$]*[\)][\s])?[-=]></regex></begin>
-                <end><regex>[\s]</regex></end>
+              <begin><regex>(?:\([^()]*\)\s*)?(?=[-=]>)</regex></begin>
+              <end><regex>[-=]></regex></end>
             </state>
 
 
@@ -164,7 +164,8 @@
 
                 <state id="Interpolated Values" scope="style.value.keyword">
                   <begin><regex>#{</regex></begin>
-                  <end><regex>}</regex></end>	
+                  <end><regex>}</regex></end>
+                  <import mode="CoffeeScript" />
                 </state>
                 
             </state>
