@@ -4,7 +4,7 @@ CoffeeSript.mode
 This is a Coda/SubEthaEdit syntax coloring mode for the CoffeeScript language.
 
 __Good news: Coda 2 is out!__     
-__Bad news: This mode is not compatible with it yet! I hope to get it working soon.__
+__Better news: This mode is now working!__
  
 Installation
 ============
