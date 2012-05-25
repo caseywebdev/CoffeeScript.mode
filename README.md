@@ -1,18 +1,14 @@
 CoffeeSript.mode
 ================
+Syntax highlighting for CoffeeScript in Coda 2.
 
-This is a Coda/SubEthaEdit syntax coloring mode for the CoffeeScript language.
-
-__Good news: Coda 2 is out!__     
-__Better news: This mode is now working!__
+This mode was originally developed by Sean Durham (https://github.com/nfiniteset/CoffeeScript.mode).
+Many thanks to him and all of the contributors.
+I've made changes to most of the code and decided to break off into a new direction with support
+for Coda 2.
  
 Installation
-============
- 
-- Download and unpack either the ZIP or TAR version of the CoffeeScript mode.
-- Rename the unzipped directory to 'CoffeeScript.mode'.
-- Coda:
-  Manually copy the CoffeeScript.mode directory into ~/Library/Application\ Support/Coda 2/Modes/.
-- SubEthaEdit:
-  Open the CoffeeScript.mode file from within SubEthaEdit using the File > Open command 
-  or by dragging the CoffeeScript.mode file onto the SubEthaEdit application icon in the dock.
+------------
+1. cd ~/Library/Application\ Support/Coda\ 2/Modes
+2. git clone git@github.com:caseywebdev/CoffeeScript.mode
+3. Start/restart Coda 2

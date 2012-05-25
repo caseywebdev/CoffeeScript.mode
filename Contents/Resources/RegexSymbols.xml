@@ -8,14 +8,13 @@
     </blocks>
 
     <symbol id="Classes" image="SymbolC" indentation="0" ignoreblocks="yes">
-        <regex>(?&lt;=[\n\r]|^)\s*class\s+(?:[\w\d\$]+\.)*([\w\d\$]+)\s*(?:\([^\)]*\))?\s*</regex>
+        <regex>(?&lt;=[\n\r]|^)\s*class\s+(?:[$\w]+\.)*([$\w]+)\s*(?:\([^\)]*\))?\s*</regex>
     </symbol>
 
     <symbol id="Functions" image="SymbolF()" indentation="1" ignoreblocks="yes">
-        <regex>(?&lt;=[\n\r]|^)\s*(@?[\w\$]+)\s*[:=]\s*(?:\(.*?\))?\s*[-=]></regex>
+        <regex>(?&lt;=[\n\r]|^)\s*(@?[$\w]+)\s*[:=]\s*(?:\(.*?\))?\s*[-=]></regex>
     </symbol>
 
-    <!-- STUDIO -->
     <symbol id="Pragma marks" font-weight="normal" font-style="normal" image="SymbolMark" indentation="0" ignoreblocks="no" show-in-comments="yes">
         <regex># !([^\n\r]+)</regex>
     </symbol>
