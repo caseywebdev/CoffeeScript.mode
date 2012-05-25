@@ -4,7 +4,7 @@
 
     <head>
         <name>CoffeeScript</name>
-        <charsintokens><![CDATA[_0987654321abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@]]></charsintokens> 
+        <charsintokens><![CDATA[_0987654321abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ$@]]></charsintokens> 
         <!-- <charsdelimitingtokens><![CDATA[ -]]></charsdelimitingtokens> -->
         <!-- <charsincompletion><![CDATA[_0987654321abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-@$</=>!]]></charsincompletion> -->
     </head>
@@ -110,18 +110,27 @@
                 <string>or</string>
                 <string>of</string>
                 <string>in</string>
+                <string>instanceof</string>
+                <string>typeof</string>
             </keywords>
-
-
+            
+           
 
             <state id="Function" scope="language.function">
-              <begin><regex>(?:\([^()]*\)\s*)?(?=[-=]>)</regex></begin>
-              <end><regex>[-=]></regex></end>
+              <begin><regex>(?:\([^()]*\)\s*)?[-=](?=>)</regex></begin>
+              <end><regex>></regex></end>
             </state>
-
-
+            
+            <keywords id="Operators" scope="language.operator">
+              <regex>([-+*/=!&lt;>%])</regex>
+            </keywords>
+            
+            <keywords id="Object Keys" scope="language.variable">
+              <regex>\s*([\w$]+)\s*[^\w$.]</regex>
+            </keywords>
+            
             <keywords id="Numbers" scope="constant.numeric">
-              <regex>(?&lt;=[^\w\d]|^)(((([0-9]+\.[0-9]*)|(\.[0-9]+))([eE][+\-]?[0-9]+)?[fFlL]?)|((([1-9][0-9]*)|0[0-7]*|(0[xX][0-9a-fA-F]+))(([uU][lL]?)|([lL][uU]?))?))(?=[^\w\d]|$)</regex>
+              <regex>(?&lt;=[^\w\d]|^)(((([0-9]+\.[0-9]*)|(\.[0-9]+))([eE][+\-]?[0-9]+)?[fFlL]?)|((([1-9][0-9]*)|0[0-7]*|(0[xX][0-9a-fA-F]+))(([uU][lL]?)|([lL][uU]?))?))(?=[^\w\$]|$)</regex>
             </keywords>
             
             <keywords id="Number Literals" useforautocomplete="yes" scope="constant.numeric.keyword">
@@ -157,7 +166,23 @@
                 <end><regex>[\n\r]</regex></end>
             </state>
 
+            <state id="String 3" scope="string">
+                <begin><regex>"{3}</regex></begin>
+                <end><regex>((((?&lt;!\\)(\\\\)*)|^)"){3}</regex></end>
 
+                <state id="Interpolated Values" scope="style.value.keyword">
+                  <begin><regex>#{</regex></begin>
+                  <end><regex>}</regex></end>
+                  <import mode="CoffeeScript" />
+                </state>
+                
+            </state>
+            
+            <state id="Single String 3" scope="string">
+                <begin><regex>'{3}</regex></begin>
+                <end><regex>((((?&lt;!\\)(\\\\)*)|^)'){3}</regex></end>
+            </state>
+            
             <state id="String" scope="string">
                 <begin><regex>"</regex></begin>
                 <end><regex>(((?&lt;!\\)(\\\\)*)|^)"</regex></end>
@@ -174,8 +199,7 @@
                 <begin><regex>'</regex></begin>
                 <end><regex>(((?&lt;!\\)(\\\\)*)|^)'</regex></end>
             </state>
-
-
+            
             <state id="RegularExpression" scope="string.regex">
                 <begin><regex>(?i)(?&lt;=[=(,:\+~]|^|return|;)\s*/(?![/*+{}?])</regex></begin>
                 <end><regex>/[cgimosx]*</regex></end>
