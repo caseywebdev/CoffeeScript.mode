@@ -1,4 +1,4 @@
-CoffeeSript.mode
+CoffeeScript.mode
 ================
 Syntax highlighting for CoffeeScript in Coda 2.
 
