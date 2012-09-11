@@ -71,8 +71,14 @@
             </state>
             
             <state id="RegularExpression" scope="string.regex">
-                <begin><regex>/(?=(?:\\/|[^/])*/[a-z]*\s*(?:[^\s@$\w(]|$))</regex></begin>
-                <end><regex>(?&lt;!\\)/[gim]*</regex></end>
+                <!-- copied from CODA2 Javascript.mode -->
+                <begin><regex>(?i)(?&lt;=[=(,:\+~!]|return|;)\s*/(?![/*+{}?\r\n])</regex></begin>
+                <end><regex>/[cgimosx]*</regex></end>
+
+                <state id="Escaped Characters" scope="string.regex.escaped.js">
+                    <begin><regex>\\</regex></begin>
+                    <end><regex>.</regex></end>	
+                </state>
             </state>
             
             <state id="Embedded JavaScript" scope="string">
