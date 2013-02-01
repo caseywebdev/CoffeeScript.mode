@@ -147,7 +147,7 @@
             
             <keywords id="Properties" scope="keyword.type">
               <regex>(@\w*)</regex>
-              <regex>(@?[$\w]+\s*:)</regex>
+              <regex>(@[$\w]+\s*:)</regex>
             </keywords>
 
             <keywords id="Classes" scope="support">
