@@ -27,7 +27,7 @@
             </state>
 
             <state id="Comment" scope="comment">
-                <begin><string>###</string></begin>
+                <begin><string>#{3}\s*\n</string></begin>
                 <end><string>###</string></end>
             </state>
 
